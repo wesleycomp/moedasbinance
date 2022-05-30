@@ -6,7 +6,7 @@ async function publicCall(path, data, method = 'GET', headers = {}) {
         const qs = data ? `?${queryString.stringify(data)}` : '';
         const result = await axios({
             method,
-            url: `${process.env.API_URL}${path}${qs}`
+            url: `${process.env.VUE_APP_API_URL}${path}${qs}`
         });
         return result.data;
     } catch (err) {
@@ -15,11 +15,11 @@ async function publicCall(path, data, method = 'GET', headers = {}) {
 }
 
 async function time() {
-    return publicCall('/v3/time');
+    return publicCall('/fapi/v1/time');
 }
 
-async function depth(symbol = 'BTCBRL', limit = 5) {
-    return publicCall('/v3/depth', { symbol, limit });
+async function depth(symbol = 'BTCUSDT', limit = 5) { //limit = qtd dos ultimos lançaemtos em ordem 5 
+    return publicCall('/fapi/v1/depth', { symbol, limit });
 }
 
 module.exports = { time, depth }
