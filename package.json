@@ -1,0 +1,24 @@
+{
+  "name": "moedasbinance",
+  "version": "1.0.0",
+  "description": "Api Node Js para conexao a endpoints da Binance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleycomp/moedasbinance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleycomp/moedasbinance/issues"
+  },
+  "homepage": "https://github.com/wesleycomp/moedasbinance#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv-safe": "^8.2.0"
+  }
+}
